@@ -12,9 +12,11 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <stdio.h>
 
 //CHARACTERS
 int			ft_isalpha(int c);
@@ -35,10 +37,6 @@ void		ft_putnbr_fd(int n, int fd);
 int			ft_atoi(const char *str);
 char		*ft_itoa(int n);
 
-//MATRIX
-char		**ft_split(const char *s, char c);
-char		**split_args(char *s);
-
 //MEMORY
 void		*ft_memset(void *b, int c, size_t len);
 void		*ft_memcpy(void *dst, const void *src, size_t n);
@@ -51,6 +49,8 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char	*dst, const char *src, size_t size);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
+char		*ft_strcat(char *src, char *str);
+int			ft_strcmp(char *s1, char *s2);
 int			ft_strncmp(const char *s1, const char *s2, unsigned int n);
 void		ft_bzero(void *s, size_t n);
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
@@ -62,6 +62,7 @@ char		*ft_substr(const char *s, unsigned int start, size_t len);
 char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strtrim(const char *s1, const char *set);
 char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+char		**split_args(char *s);
 
 //FT_PRINTF
 int			ft_printf(const char *arg, ...);

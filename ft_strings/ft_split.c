@@ -74,6 +74,7 @@ char	**matrix_errors(char **matrix, int i, int mark)
 	{
 		while (i-- >= 0)
 			free(matrix[i]);
+		free(matrix);
 		return (matrix);
 	}
 }
