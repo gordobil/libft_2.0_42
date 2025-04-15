@@ -33,7 +33,6 @@ all:				$(NAME)
 
 $(NAME):			$(OBJECTS)
 					@ar rcs $(NAME) $(OBJECTS)
-					@mv $(NAME) ../
 					echo "$(WHITE)\n · Libft compilation complete."
 
 $(OBJ_DIR)%.o:		$(SRC_PATH)%.c | $(OBJ_DIR)
@@ -50,7 +49,6 @@ clean:
 					
 fclean:				clean
 					@rm -rf $(NAME)
-					@rm -rf ../$(NAME)
 					echo "$(WHITE) · Libft executable removed."
 
 re:					fclean all
