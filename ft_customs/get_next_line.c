@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../libft.h"
 
 char	*save_line(char	*buffer)
 {
@@ -68,7 +68,8 @@ char	*append(char *buffer, char *temp_buff)
 	char	*temp;
 
 	temp = ft_strjoin(buffer, temp_buff);
-	free(buffer);
+	if (buffer)
+		free(buffer);
 	return (temp);
 }
 
